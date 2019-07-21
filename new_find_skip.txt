@@ -1,0 +1,279 @@
+﻿#-*- coding: utf-8 -*-
+#import os.path
+
+#open file
+#with open("C:\\py_project\\oe1.txt", 'r', encoding="utf8") as inf:
+#    inf.read()
+
+inf = open("C:\\py_project\\oe1.txt", 'r', encoding="utf8")
+inf = inf.read()
+
+#input_string = "Съешь ещё этих мягких французских булок, да выпей же чаю."
+input_string = inf
+
+# from any text do monoline string
+def monoline(polyline):
+    low_string = polyline.lower()                       # do lower index str
+    abc_string = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"    # list of alphabet
+    abc_list = list(abc_string)                     
+    fine_list = []                                      # empty list  
+    for i in low_string:                                # do list of abc only
+        if i in abc_list:
+            fine_list.append(i)
+    return fine_list
+
+# midleoutput:
+only_string_list = monoline(input_string)
+
+""" !!! requires optimization: do lists of simple numbers samples 2, 3, 5, 7!!!"""
+e = 0
+list_2 = []
+for i in only_string_list:
+    if e % 2 == 0:
+        list_2.append(i)
+    e += 1
+
+e = 1
+list_2_1 = []
+for i in only_string_list:
+    if e % 2 == 0:
+        list_2_1.append(i)
+    e += 1
+    
+e = 0
+list_3 = []
+for i in only_string_list:
+    if e % 3 == 0:
+        list_3.append(i)
+    e += 1
+
+e = 1
+list_3_1 = []
+for i in only_string_list:
+    if e % 3 == 0:
+        list_3_1.append(i)
+    e += 1
+
+e = 2
+list_3_2 = []
+for i in only_string_list:
+    if e % 3 == 0:
+        list_3_2.append(i)
+    e += 1
+
+e = 0
+list_5 = []
+for i in only_string_list:
+    if e % 5 == 0:
+        list_5.append(i)
+    e += 1
+
+e = 1
+list_5_1 = []
+for i in only_string_list:
+    if e % 5 == 0:
+        list_5_1.append(i)
+    e += 1
+
+e = 2
+list_5_2 = []
+for i in only_string_list:
+    if e % 5 == 0:
+        list_5_2.append(i)
+    e += 1
+    
+e = 3
+list_5_3 = []
+for i in only_string_list:
+    if e % 5 == 0:
+        list_5_3.append(i)
+    e += 1
+
+e = 4
+list_5_4 = []
+for i in only_string_list:
+    if e % 5 == 0:
+        list_5_4.append(i)
+    e += 1
+    
+e = 0
+list_7 = []
+for i in only_string_list:
+    if e % 7 == 0:
+        list_7.append(i)
+    e += 1
+
+e = 1
+list_7_1 = []
+for i in only_string_list:
+    if e % 7 == 0:
+        list_7_1.append(i)
+    e += 1
+
+e = 2
+list_7_2 = []
+for i in only_string_list:
+    if e % 7 == 0:
+        list_7_2.append(i)
+    e += 1
+    
+e = 3
+list_7_3 = []
+for i in only_string_list:
+    if e % 7 == 0:
+        list_7_3.append(i)
+    e += 1
+
+e = 4
+list_7_4 = []
+for i in only_string_list:
+    if e % 7 == 0:
+        list_7_4.append(i)
+    e += 1
+
+e = 5
+list_7_5 = []
+for i in only_string_list:
+    if e % 7 == 0:
+        list_7_5.append(i)
+    e += 1
+    
+e = 6
+list_7_6 = []
+for i in only_string_list:
+    if e % 7 == 0:
+        list_7_6.append(i)
+    e += 1
+    
+"""
+print(only_string_list) 
+print(list_2)
+print(list_2_1)
+print(list_3)
+print(list_3_1)
+print(list_3_2)
+print(list_5)
+print(list_5_1)
+print(list_5_2)
+print(list_5_3)
+print(list_5_4)
+print(list_7)
+print(list_7_1)
+print(list_7_2)
+print(list_7_3)
+print(list_7_4)
+print(list_7_5)
+print(list_7_6)
+"""
+
+"""from lists to strings"""
+#result_test = ''.join(only_string_list)#.find(my_word)
+result_2 = ''.join(list_2)#.find(my_word)
+result_2_1 = ''.join(list_2_1)#.find(my_word)
+result_3 = ''.join(list_3)#.find(my_word)
+result_3_1 = ''.join(list_3_1)#.find(my_word)
+result_3_2 = ''.join(list_3_2)#.find(my_word)
+result_5 = ''.join(list_5)#.find(my_word)
+result_5_1 = ''.join(list_5_1)#.find(my_word)
+result_5_2 = ''.join(list_5_2)#.find(my_word)
+result_5_3 = ''.join(list_5_3)#.find(my_word)
+result_5_4 = ''.join(list_5_4)#.find(my_word)
+result_7 = ''.join(list_7)#.find(my_word)
+result_7_1 = ''.join(list_7_1)#.find(my_word)
+result_7_2 = ''.join(list_7_2)#.find(my_word)
+result_7_3 = ''.join(list_7_3)#.find(my_word)
+result_7_4 = ''.join(list_7_4)#.find(my_word)
+result_7_5 = ''.join(list_7_5)#.find(my_word)
+result_7_6 = ''.join(list_7_6)#.find(my_word)
+
+""" OUTPUT: print output strings"""
+#print(result_test) 
+print(result_2)
+print(result_2_1)
+print(result_3)
+print(result_3_1)
+print(result_3_2)
+print(result_5)
+print(result_5_1)
+print(result_5_2)
+print(result_5_3)
+print(result_5_4)
+print(result_7)
+print(result_7_1)
+print(result_7_2)
+print(result_7_3)
+print(result_7_4)
+print(result_7_5)
+print(result_7_6)
+
+#print(type(result_test))
+#my_word = input()#'уу'
+"""FIND THIS WORD"""
+my_word = "аааааа"
+
+"""IN THIS STRINGS and PRINT FIRST POSITION"""
+#result_test = result_test.find(my_word)
+result_2 = result_2.find(my_word)
+result_2_1 = result_2_1.find(my_word)
+result_3 = result_3.find(my_word)
+result_3_1 = result_3_1.find(my_word)
+result_3_2 = result_3_2.find(my_word)
+result_5 = result_5.find(my_word)
+result_5_1 = result_5_1.find(my_word)
+result_5_2 = result_5_2.find(my_word)
+result_5_3 = result_5_3.find(my_word)
+result_5_4 = result_5_4.find(my_word)
+result_7 = result_7.find(my_word)
+result_7_1 = result_7_1.find(my_word)
+result_7_2 = result_7_2.find(my_word)
+result_7_3 = result_7_3.find(my_word)
+result_7_4 = result_7_4.find(my_word)
+result_7_5 = result_7_5.find(my_word)
+result_7_6 = result_7_6.find(my_word)
+ 
+       
+#print(result_test) 
+print(result_2)
+print(result_2_1)
+print(result_3)
+print(result_3_1)
+print(result_3_2)
+print(result_5)
+print(result_5_1)
+print(result_5_2)
+print(result_5_3)
+print(result_5_4)
+print(result_7)
+print(result_7_1)
+print(result_7_2)
+print(result_7_3)
+print(result_7_4)
+print(result_7_5)
+print(result_7_6)      
+
+    
+"""    
+my_word = 0    
+find_substring(my_word)
+"""
+#print(output)
+"""
+print(result_test)
+print(result_2)
+print(result_2_1)
+print(result_3)
+print(result_3_1)
+print(result_3_2)
+print(result_5)
+print(result_5_1)
+print(result_5_2)
+print(result_5_3)
+print(result_5_4)
+print(result_7)
+print(result_7_1)
+print(result_7_2)
+print(result_7_3)
+print(result_7_4)
+print(result_7_5)
+print(result_7_6)
+"""

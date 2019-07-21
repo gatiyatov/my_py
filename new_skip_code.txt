@@ -1,0 +1,41 @@
+﻿input_string = "Съешь ещё этих мягких французских булок, да выпей же чаю."
+
+# from some text make a monoline alphabetical string with low-cased letters
+def monoline(polyline):
+    low_string = polyline.lower()                       # make low-case letters from my string
+    abc_string = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"    # the constant list of the alphabet
+    abc_list = list(abc_string)                     	# make list from the given alphabet
+    fine_list = []                                      # create new empty list  
+    for i in low_string:                                # chose only alphabetical letters from a given text
+        if i in abc_list:				# and add it to the empty list (fine_list)
+            fine_list.append(i)				#
+    return fine_list					#
+
+# midleoutput: make internediate (alphabetical low-cased only) string from given text
+# by running previos function 
+only_string_list = monoline(input_string)
+
+
+for i in only_string_list:
+	dictionary = {}					# creat the empty dictionary, where new srings will be kept
+
+
+
+d={}
+for x in range(1,10):
+        d["string{0}".format(x)]="Hello"
+
+In [7]: d["string5"]
+Out[7]: 'Hello'
+
+In [8]: d
+Out[8]: 
+{'string1': 'Hello',
+ 'string2': 'Hello',
+ 'string3': 'Hello',
+ 'string4': 'Hello',
+ 'string5': 'Hello',
+ 'string6': 'Hello',
+ 'string7': 'Hello',
+ 'string8': 'Hello',
+ 'string9': 'Hello'}
